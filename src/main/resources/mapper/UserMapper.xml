@@ -3,15 +3,15 @@
 <mapper namespace="com.example.echat33.mapper.userMapper" >
     <resultMap id="BaseResultMap" type="com.example.echat33.DTO.User" >
         <id column="id" property="id" jdbcType="INTEGER" />
-        <result column="user_name" property="userName" jdbcType="VARCHAR" />
+        <result column="username" property="userName" jdbcType="VARCHAR" />
         <result column="password" property="password" jdbcType="VARCHAR" />
 
     </resultMap>
 
     <select id="queryUser" resultMap="BaseResultMap" >
         select
-          *
-        from usr
+            username,password
+        from test.ur
     </select>
 
 </mapper>

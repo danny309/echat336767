@@ -18,9 +18,9 @@ public class SpringBootController2 {
     @Resource
     private userServiceImpl userService;
     @RequestMapping(value = "/springBoot/test2")
-    public @ResponseBody String say() {
+    public @ResponseBody List<User> say() {
         List<User> users = userService.findAll();
-        return "Hello,springBoot!";
+        return users;
     }
 
 }
